@@ -896,6 +896,18 @@ h1, h2, h3 {
     padding: 0;
 }
 
+@media only screen and (min-width: 1367px) {
+    
+    .cont-width101 {
+        max-width: 1200px;
+    }
+
+    .img-bck {
+        max-width: 500px;
+    }
+
+}
+
 @media only screen and (min-width: 1366px) {
     /*stop the font size growth at 12rem*/
         .scal-txt {
