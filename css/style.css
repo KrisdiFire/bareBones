@@ -960,15 +960,11 @@ h1, h2, h3 {
         right: 0;
     }
     .img-bck-txt01 {
-        text-align: center !important;
-        width: 50% !important;
         transform: rotateZ(-90deg);
         transform-origin: 0 0;
-        margin-left: 5%;
+        margin-left: 8%;
     }
     .img-bck-txt02 {
-        text-align: center !important;
-        width: 50% !important;
         transform: rotateZ(-90deg);
         transform-origin: 0 0;
         margin-left: 80%;
@@ -1089,4 +1085,3 @@ h1, h2, h3 {
         width: 100%;
     }
 }
-
