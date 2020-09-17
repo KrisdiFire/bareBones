@@ -15,7 +15,7 @@
     flex-direction: row;
     align-items: center;
     width: 70%;
-    margin: auto 15%;
+    margin: auto auto;
     height: 3em;
     background-color: black;
     top: 0;
@@ -33,10 +33,10 @@
 .home01 {
     margin: 0em 0.5em;
     color: rgb(255, 255, 255);
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 800;
     text-decoration: none;
-    font-family: 'Armata';
+    font-family: 'Alata';
     text-shadow: 0 0 2em rgba(255, 166, 0, 0);
     -moz-text-stroke-color: rgba(255, 166, 0, 0);
 }
