@@ -313,6 +313,10 @@ h1, h2, h3 {
 .cont-width101 {
     width: 100%;
 }
+.max-width-override {
+    max-width: unset !important;
+}
+
 /*to flip the order of elements once on a small screen*/
 .flex-op-dir-sm {
     flex-direction: row;
@@ -481,39 +485,39 @@ h1, h2, h3 {
 }
 
 /*image background*/
-.img-bck-div {
+.img-bck-inner-div {
     transition: all ease-in-out 0.3s;
 }
-.img-bck-div-mint {
+.img-bck-div-top-less {
     margin-top: -50%;
 }
-.img-bck-div-maxt {
+.img-bck-div-top-more {
     margin-top: 50%;
 }
 .img-bck {
     position: relative;
     /* width: 100%; */
-    height: 100%;
-    max-width: 500px;
+    /* height: auto; */
+    max-height: 400px;
+    /*max-width: 400px;*/
     object-fit: cover;
     transition: all ease-in-out 0.3s;
-    opacity: 0.6;
+    opacity: 0.5;
     filter: grayscale(100%);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
 }
-.img-bck-div:hover, .img-bck-div:hover .img-bck {
-    opacity: 1 !important;
+.img-bck-inner-div:hover, .img-bck-inner-div:hover .img-bck {
+    opacity: 1;
     transition: all ease-in-out 0.3s;
-    z-index: 100;
+    
 }
-.img-bck-div:hover .img-bck-txt01, .img-bck-div:hover .img-bck-txt02 {
+.img-bck-inner-div:hover .img-bck-txt01, .img-bck-inner-div:hover .img-bck-txt02 {
     opacity: 0;
     transition: all ease-in-out 0.6s;
 }
-.img-bck-txt01 {
-    opacity: 1;
-    transition: all ease-in-out 0.6s;
-}
-.img-bck-txt02 {
+.img-bck-txt01, .img-bck-txt02 {
     opacity: 1;
     transition: all ease-in-out 0.6s;
 }
@@ -521,10 +525,9 @@ h1, h2, h3 {
     opacity: 0;
     transition: all ease-in-out 0.3s;
 }
-.img-bck-div:hover .img-bck-onhov {
+.img-bck-inner-div:hover .img-bck-onhov {
     opacity: 1;
-    z-index: 101;
-    transition: all ease-in-out 0.6s;
+    transition: all ease-in-out 0.3s;
 }
 .a-img-bck {
     top: 0;
@@ -541,12 +544,16 @@ h1, h2, h3 {
 }
 .image-div-cover {
     object-fit: cover;
+    height: 100%;
+}
+.full-height {
+    height: 100%;
 }
 .image-div-cont {
     object-fit: contain;
     max-width:100%;
     max-height:100%;
-    transition: all 200ms ease;
+    transition: all 0.3s ease;
 }
 .image-div-small {
     width: 100px;
@@ -733,7 +740,7 @@ h1, h2, h3 {
 
 /*list styles*/
 .list-01 {
-    color: black;
+    /*color: black;*/
     padding-inline-start: 0px;
     border: none;
 }
@@ -755,7 +762,7 @@ h1, h2, h3 {
 /*}*/
 .list-01 > li::before {
     content: "\2022";
-    color: #000000;
+    color: white;
     font-weight: bold;
     display: inline-block; 
     width: 1em;
@@ -903,9 +910,13 @@ h1, h2, h3 {
     }
 
     .img-bck {
-        max-width: 500px;
+      /*max-width: 500px;*/
+        max-height: 500px;
     }
 
+    #footer02 p {
+        margin: 0em 0.5em 0em 2em;
+    }
 }
 
 @media only screen and (min-width: 1366px) {
@@ -932,35 +943,6 @@ h1, h2, h3 {
 }
 
 @media only screen and (max-width: 768px) {
-
-    #prlx-01 {
-        margin-top: 15rem;
-        margin-left: 50%;
-    }
-    #prlx-02-cont {
-        top: -14rem;
-    }
-    #prlx-02 {
-        margin-left: 0rem;
-        margin-top: 10rem;
-    }
-    #prlx-03 {
-        position: absolute;
-        top: 5rem;
-        right: 0;
-        align-self: center;
-        transform: translate(-2.5rem, 0rem);
-        display: none;
-    }
-    #prlx-04 {
-        left: unset;
-    }
-    #prlx-05 {
-        display: none;
-    }
-    #prlx-07 {
-        display: none;
-    }
 
 /*displays stuff which wasnt displayed when viewed on smaller screens*/
     .not-on-lar {
@@ -1051,8 +1033,8 @@ h1, h2, h3 {
         align-items: center;
         justify-content: center;
     }
-/*scale the images for the new screen size*/
-    .img-bck-div-mint, .img-bck-div-maxt {
+    /*scale the images for the new screen size*/
+    .img-bck-div-top-less, .img-bck-div-top-more {
         margin-top: 0;
     }
     .img-bck {
@@ -1064,27 +1046,32 @@ h1, h2, h3 {
         transition: all ease-in-out 0.3s;
     }
     /*move the image columns left or right on medium scr size*/
-    .img-bck-ms-mar-r {
+    .img-bck-right-med {
         margin-right: auto;
         left: 0;
     }
-    .img-bck-ms-mar-l {
+    .img-bck-left-med {
         margin-left: auto;
         right: 0;
     }
     .img-bck-txt01 {
-        width: 75% !important;
-        transform: rotateZ(90deg);
-        transform-origin: center;
-        bottom: 25% !important;        
+        text-align: center !important;
+        width: 50% !important;
+        transform: rotateZ(-90deg);
+        transform-origin: 0 0;
+        margin-left: 5%;
     }
     .img-bck-txt02 {
-        width: 75% !important;
+        text-align: center !important;
+        width: 50% !important;
         transform: rotateZ(-90deg);
-        transform-origin: center;
-        bottom: 60% !important;
-        top: unset;
-        right: 0;
+        transform-origin: 0 0;
+        margin-left: 80%;
+    }
+
+    .image-div-small {
+        height: 50px;
+        width: 50px;
     }
 
 /*pretvara layout footera iz row u kolone*/
@@ -1135,10 +1122,6 @@ h1, h2, h3 {
         transform: rotate(0deg);
         margin-left: 25%;
         font-size: 1rem !important;
-    }
-    .image-div-small {
-        height: 50px;
-        width: 50px;
     }
 
 /*removes elements on lower than 480px screens*/
@@ -1201,15 +1184,13 @@ h1, h2, h3 {
     }
     .img-bck-txt01 {
         width: 100% !important;
-        margin-left: -25%;
     }
     .img-bck-txt02 {
         width: 100% !important;
-        margin-left: 25%;
         right: unset;
     }
 
-    .img-bck-cont-on-sm {
+    .img-bck-outer-on-sm {
         width: 70%;
         align-self: center;
     }
