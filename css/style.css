@@ -523,6 +523,13 @@ h1, h2, h3 {
     text-align: unset !important;
     font-family: 'Alata', sans-serif;
 }
+.intro-txt02 {
+    transform: rotateZ(-90deg);
+    transform-origin: 0 0;
+    right: 0;
+    bottom: 0;
+    margin-right: -20rem;
+}
 .scal-txt {
     font-size: 12vw;
 }
@@ -835,6 +842,13 @@ h1, h2, h3 {
 
 @media only screen and (max-width: 768px) {
 
+    .intro-txt02 {
+        transform: rotateZ(-90deg) translate(-10px, 110px);
+        transform-origin: 0 0;
+        bottom: 0;
+        margin-right: 0rem;
+    }
+
 /*displays stuff which wasnt displayed when viewed on smaller screens*/
     .not-on-lar {
         display: block !important;
@@ -1074,4 +1088,3 @@ h1, h2, h3 {
         width: 100%;
     }
 }
-
