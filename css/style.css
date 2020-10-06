@@ -524,11 +524,10 @@ h1, h2, h3 {
     font-family: 'Alata', sans-serif;
 }
 .intro-txt02 {
-    transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg) translate(-10px, 190px);
     transform-origin: 0 0;
     right: 0;
     bottom: 0;
-    margin-right: -20rem;
 }
 .scal-txt {
     font-size: 12vw;
@@ -1004,6 +1003,10 @@ h1, h2, h3 {
         margin-top: 1rem;
         flex-wrap: wrap;
         display: flex;
+        justify-content: center;
+    }
+
+    #footer02 {
         justify-content: center;
     }
 }
